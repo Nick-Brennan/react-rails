@@ -1,6 +1,7 @@
 class Api::V1::SkillsController < Api::V1::BaseController
   def index
-    respond_with Skill.all
+    # respond_with Skill.all
+    render :json => Skill.all
   end
 
   def create
