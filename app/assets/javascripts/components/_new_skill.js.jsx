@@ -9,7 +9,7 @@ var NewSkill = React.createClass({
 		    type: 'POST',
 		    data: { skill: { name: name, details: details } },
 		    success: (response) => {
-		      console.log('it worked!', response);
+		     this.props.handleSubmit(response);
 		    }
 		});
 	},
