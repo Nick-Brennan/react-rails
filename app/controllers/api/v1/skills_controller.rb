@@ -9,7 +9,10 @@ class Api::V1::SkillsController < Api::V1::BaseController
   end
 
   def destroy
-    respond_with Skill.destroy(params[:id])
+    # respond_with Skill.destroy(params[:id])
+    @destroyed = Skill.destroy([params[:id]])
+    puts @destroyed
+    render :json => @destroyed
   end
 
   def update
