@@ -3,7 +3,8 @@ var Main = React.createClass({
 		return(
 			<div>
 				<Header />
-			</div>	
+				<Body />
+			</div>		
 		)
 	}
 });

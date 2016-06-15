@@ -1,8 +1,8 @@
-var Header = React.createClass({
+var AllSkills = React.createClass({
 	render: function(){
 		return(
 			<div>
-				<h1>Header</h1>
+				<h1>All Skills</h1>
 			</div>
 		)
 	}
