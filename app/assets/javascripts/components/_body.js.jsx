@@ -12,6 +12,10 @@ var Body = React.createClass({
 		});
 	},
 
+	handleEdit: function(skill){
+		console.log("passing the edited skill to body: ", skill);
+	},
+
 	removeSkillFromDOM: function(id){
 		var newSkills = this.state.skills.filter((skill) => {
 			return skill.id != id;
@@ -39,7 +43,7 @@ var Body = React.createClass({
 		return(
 			<div>
 				<NewSkill handleSubmit={this.handleSubmit} />
-				<AllSkills skills={this.state.skills.reverse()} handleDelete={this.handleDelete} />
+				<AllSkills skills={this.state.skills.reverse()} handleDelete={this.handleDelete} handleEdit={this.handleEdit} />
 			</div>
 		)
 	}
