@@ -9,8 +9,8 @@ var Skill = React.createClass({
 		if(this.state.editable){
 			var name = this.refs.name.value;
 			var details = this.refs.details.value;
-			var skill = {name: name, details: details};
-			console.log('editing', this.state.editable, name, details);
+			var skill = {name: name, details: details, id: this.props.skill.id};
+			console.log('editing', this.state.editable, name, details, this.props.skill.id);
 			this.props.handleUpdate(skill);
 		}	
 
