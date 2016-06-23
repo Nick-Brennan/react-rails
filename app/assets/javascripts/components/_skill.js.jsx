@@ -25,19 +25,20 @@ var Skill = React.createClass({
 
 	render: function(){
 
-		var name = this.state.editable ? <input defaultValue={this.props.skill.name} ref="name"/>
+		var name = this.state.editable ? <input defaultValue={this.props.skill.name} ref="name" className="form-control"/>
 									   : <h3>{this.props.skill.name}</h3>
 
-		var details = this.state.editable ? <textarea defaultValue={this.props.skill.details} ref="details"></textarea>
+		var details = this.state.editable ? <textarea defaultValue={this.props.skill.details} ref="details" className="form-control"></textarea>
 										  : <p>{this.props.skill.details}</p>
 
 		return (
-					<div>			
+					<div className="form-group">		
 						{name}
 						<p><strong>Level:</strong> {this.props.skill.level}</p>
 						{details}
-						<button onClick={this.handleEdit}>{this.state.editable ? 'Submit' : 'Edit'}</button>
-						<button onClick={this.props.handleDelete}>Delete</button>
+						<button onClick={this.handleEdit} className="btn btn-primary">{this.state.editable ? 'Submit' : 'Edit'}</button>
+						<button onClick={this.props.handleDelete} className=" btn btn-danger">Delete</button>
+						<hr/>
 					</div>
 		)
 	}

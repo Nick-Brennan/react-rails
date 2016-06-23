@@ -1,8 +1,8 @@
 var Header = React.createClass({
 	render: function(){
 		return(
-			<div>
-				<h1>Header</h1>
+			<div className="page-header">
+				<h1>Simple React / Rails Blog</h1>
 			</div>
 		)
 	}

@@ -16,10 +16,10 @@ var NewSkill = React.createClass({
 
 	render: function(){
 		return(
-			<div>
-				<input ref='name' placeholder='Name of Skill' />
-				<input type="textarea" ref='details' placeholder="Details" />
-				<button onClick={this.handleClick}>Submit</button>
+			<div className="form-group">
+				<input ref='name' placeholder='Name of Skill' className="form-control"/>
+				<textarea ref='details' placeholder="Details" className="form-control"></textarea>
+				<button onClick={this.handleClick} className="btn btn-success">Submit</button>
 			</div>
 		)
 		var name    = this.refs.name.value;

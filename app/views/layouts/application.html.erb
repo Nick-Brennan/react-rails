@@ -3,7 +3,16 @@
 <head>
   <title>Creact</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= javascript_include_tag "application" %>
+  <style>
+	button{
+		margin: 3px;
+	}
+	textarea.form-control{
+		height: 100px;
+	}
+  </style>
   <%= csrf_meta_tags %>
 </head>
 <body>
