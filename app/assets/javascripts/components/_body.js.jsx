@@ -13,7 +13,23 @@ var Body = React.createClass({
 	},
 
 	handleEdit: function(skill){
-		console.log("passing the edited skill to body: ", skill);
+		console.log("passing the edited skill to body: ", skill.id);
+		$.ajax({
+		    url: `/api/v1/skills/${skill.id}`,
+		    type: 'PUT',
+		    data: { skill: skill },
+		    success: () => {
+		      console.log('you did it');
+		      this.updateSkills(skill);
+		    }
+		});
+	},
+
+	updateSkills: function(skill) {
+	  var skills = this.state.skills.filter((s) => { return s.id != skill.id });
+	  skills.push(skill);
+
+	  this.setState({ skills: skills });
 	},
 
 	removeSkillFromDOM: function(id){
